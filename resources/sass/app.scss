@@ -1,0 +1,72 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import "~cropperjs/dist/cropper.min.css";
+
+.image-recognition {
+    width: 80%;
+    margin: 20px auto;
+
+    &__header {
+        margin-bottom: 20px;
+
+        .title {
+            text-align: center;
+        }
+    }
+
+    form {
+
+        .image-result {
+            display: flex;
+            margin-top: 10px;
+            align-items: center;
+            flex-direction: column;
+
+            p { margin-bottom: 10px; }
+
+            .crop-btn {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                font-size: 20px;
+                cursor: pointer;
+                margin-top: 10px;
+                border-radius: 5px;
+                align-items: center;
+                background: #CCCCCC;
+                justify-content: center;
+                border: 1px solid #979797;
+            }
+
+            .confirm-result {
+                display: flex;
+                flex-direction: row;
+                height: min-content;
+                justify-content: space-evenly;
+            }
+
+            .confirm-crop-row {
+                width: 100%;
+                margin-top: 10px;
+                @extend .confirm-result !optional;
+            }
+        }
+    }
+}
+
+.result-btn {
+    &:first-of-type {
+        color: #2F935A;
+    }
+    &:last-of-type {
+        color: #D50000;
+    }
+}
+

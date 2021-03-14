@@ -15,6 +15,8 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
+putenv('GOOGLE_APPLICATION_CREDENTIALS=/home/andre/Documentos/keys/My_Project-8b33a009b6dd.json');
+
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
