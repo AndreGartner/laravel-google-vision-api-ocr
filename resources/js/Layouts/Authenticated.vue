@@ -18,7 +18,7 @@
                                 <breeze-nav-link :href="route('dashboard')" :active="route().current('dashboard') || route().current('/')">
                                     Dashboard
                                 </breeze-nav-link>
-                                <breeze-nav-link :href="route('recognition')" :active="route().current('recognition')">
+                                <breeze-nav-link :href="route('recognition.index')" :active="route().current('recognition.index')">
                                     Image Recognition
                                 </breeze-nav-link>
                             </div>

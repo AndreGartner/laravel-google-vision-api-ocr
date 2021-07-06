@@ -50,6 +50,7 @@
 <script>
 require('jimp/browser/lib/jimp');
 const Jimp = window.Jimp;
+import Cropper from 'cropperjs';
 
 export default {
     props: [],

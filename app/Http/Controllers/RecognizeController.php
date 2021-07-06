@@ -50,6 +50,7 @@ class RecognizeController extends Controller
             return response(['result' => $texts[0]->getDescription()], 200);
 
         } catch (\Exception $e) {
+            dd($e);
             return response(['message' => 'Error on Recognize image!'], 400);
         }
     }

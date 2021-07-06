@@ -26,6 +26,9 @@ Route::get('/dashboard', function () {
 
 Route::get('/recognition', function () {
     return Inertia::render('Recognition');
-})->middleware(['auth', 'verified'])->name('recognition');
+})->middleware(['auth', 'verified'])->name('recognition.index');
+
+Route::post('/recognize', 'App\Http\Controllers\RecognizeController@recognize')
+    ->name('recognition.save');
 
 require __DIR__.'/auth.php';
