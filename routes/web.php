@@ -1,7 +1,8 @@
 <?php
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RecognizeController;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,16 @@ use App\Http\Controllers\RecognizeController;
 */
 
 Route::get('/', function () {
-    return view('recognition.recognition');
-});
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::post('/recognize', [RecognizeController::class, 'recognize']);
+
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/recognition', function () {
+    return Inertia::render('Recognition');
+})->middleware(['auth', 'verified'])->name('recognition');
+
+require __DIR__.'/auth.php';
